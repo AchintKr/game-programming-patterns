@@ -91,7 +91,7 @@ to grab the loot!"
 <aside name="tutorial">
 
 Tutorial systems are a pain to implement gracefully, and most players will spend
-only a fraction of their time using in-game help, so it feels like they aren't
+only a fraction of their time using *in-game* help, so it feels like they aren't
 worth the effort. But that fraction where they *are* using the tutorial can be
 invaluable for easing the player into your game.
 
@@ -236,12 +236,12 @@ Requests can be **handled directly** or **routed to interested parties**. This
 
 If you only want to decouple *who* receives a message from its sender, patterns
 like <a href="observer.html">Observer</a> and <a href="command.html">Command</a>
-will take care of this with less <span name="simple">complexity</span>. You only
+will take care of this with less <span name="simple">complexity</span> . You only
 need a queue when you want to decouple something *in time*.
 
 <aside name="simple">
 
-I mention this in nearly every chapter, but it's worth emphasizing. Complexity
+I mention this in nearly every chapter, but it's worth emphasizing . Complexity
 slows you down, so treat simplicity as a precious resource.
 
 </aside>
@@ -251,14 +251,14 @@ another chunk B to do some work. The natural way for A to initiate that is by
 *pushing* the request to B.
 
 Meanwhile, the natural way for B to process that request is by *pulling* it in
-at a convenient time in *its* run cycle. When you have a push model on one end
-and a pull model on the other, you need a buffer between them. That's what a
-queue provides that simpler decoupling patterns don't.
+at a convenient time in *its* run cycle . When you have a push model on one end
+and a pull model on the other, you need a buffer between them . That's what a
+queue provides that simpler decoupling patterns don't .
 
 Queues give control to the code that pulls from it -- the receiver can delay
-processing, aggregate requests, or discard them entirely. But queues do this by
-taking control *away* from the sender. All the sender can do is throw a request on the
-queue and hope for the best. This makes queues a poor fit when the sender needs
+processing, aggregate requests, or discard them entirely . But queues do this by
+taking control *away* from the sender . All the sender can do is throw a request on the
+queue and hope for the best . This makes queues a poor fit when the sender needs
 a response.
 
 ## Keep in Mind
